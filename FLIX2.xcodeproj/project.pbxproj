@@ -15,6 +15,7 @@
 		2A02D4EA200C455C0024793C /* FLIX2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02D4E9200C455C0024793C /* FLIX2UITests.swift */; };
 		2A02D4F8200C46570024793C /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02D4F7200C46570024793C /* NowPlayingViewController.swift */; };
 		2A02D4FA200C4DF20024793C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02D4F9200C4DF20024793C /* MovieCell.swift */; };
+		2A68903B20124FAD0006D427 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68903A20124FAD0006D427 /* DetailViewController.swift */; };
 		7A448D5057A0389D7B8194CF /* Pods_FLIX2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195E8067FA5F43FF207FA775 /* Pods_FLIX2UITests.framework */; };
 		DAC58775FBFE0CF51F1768D0 /* Pods_FLIX2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1AD8750856D87472FB7A1E /* Pods_FLIX2.framework */; };
 		F83F385A6C497BEADC92E956 /* Pods_FLIX2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC0C495747438CC13710720 /* Pods_FLIX2Tests.framework */; };
@@ -56,6 +57,7 @@
 		2A02D4EB200C455C0024793C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A02D4F7200C46570024793C /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		2A02D4F9200C4DF20024793C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		2A68903A20124FAD0006D427 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4978E761499EAE8A0F5F0E70 /* Pods-FLIX2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLIX2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLIX2/Pods-FLIX2.debug.xcconfig"; sourceTree = "<group>"; };
 		4A990277B070AC514F8132C9 /* Pods-FLIX2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLIX2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLIX2Tests/Pods-FLIX2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C1AD8750856D87472FB7A1E /* Pods_FLIX2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLIX2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,13 +118,13 @@
 		2A02D4C8200C455C0024793C /* FLIX2 */ = {
 			isa = PBXGroup;
 			children = (
+				2A68903920124F5C0006D427 /* Views */,
+				2A68903820124F3E0006D427 /* View Controllers */,
 				2A02D4C9200C455C0024793C /* AppDelegate.swift */,
 				2A02D4CD200C455C0024793C /* Main.storyboard */,
 				2A02D4D0200C455C0024793C /* Assets.xcassets */,
 				2A02D4D2200C455C0024793C /* LaunchScreen.storyboard */,
 				2A02D4D5200C455C0024793C /* Info.plist */,
-				2A02D4F7200C46570024793C /* NowPlayingViewController.swift */,
-				2A02D4F9200C4DF20024793C /* MovieCell.swift */,
 			);
 			path = FLIX2;
 			sourceTree = "<group>";
@@ -143,6 +145,23 @@
 				2A02D4EB200C455C0024793C /* Info.plist */,
 			);
 			path = FLIX2UITests;
+			sourceTree = "<group>";
+		};
+		2A68903820124F3E0006D427 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A02D4F7200C46570024793C /* NowPlayingViewController.swift */,
+				2A68903A20124FAD0006D427 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2A68903920124F5C0006D427 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A02D4F9200C4DF20024793C /* MovieCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A264D3C289A118046234A56D /* Frameworks */ = {
@@ -466,6 +485,7 @@
 				2A02D4F8200C46570024793C /* NowPlayingViewController.swift in Sources */,
 				2A02D4CA200C455C0024793C /* AppDelegate.swift in Sources */,
 				2A02D4FA200C4DF20024793C /* MovieCell.swift in Sources */,
+				2A68903B20124FAD0006D427 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
