@@ -12,7 +12,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movies: [[String:Any]] = []
+    var movies: [Movie] = []
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,12 +56,11 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
         let movie = movies[indexPath.item]
-        if let posterpathString = movie["poster_path"] as? String{
             let baseURLString = "https://image.tmdb.org/t/p/w500"
-            let posterURL = URL(string:baseURLString + posterpathString)!
+            let posterURL = URL(string:baseURLString + movie.posterURL)!
             cell.posterImageView.af_setImage(withURL: posterURL)
             
-        }
+        
         return cell
     }
     
@@ -77,7 +76,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
-                self.movies = movies
+                self.movies = Movie.movies(dictionaries: movies)
                 //                for movie in movies{
                 //                    let title = movie["title"] as! String
                 //                    print(title)
